@@ -35,6 +35,23 @@ createApp({
   },
   methods: {
     // Funzioni
-
+    //Click indietro
+    previousClick() {
+      console.log("prev");
+      if (this.currentIndex == this.images.lenght + 1) {
+        this.currentIndex = 0;
+      } else {
+        this.currentIndex--
+      }
+    },
+    //Click avanti
+    nextClick() {
+      console.log("next");
+      if (this.currentIndex == this.images.lenght - 1) {
+        this.currentIndex = 0;
+      } else {
+        this.currentIndex++;
+      }
+    },
   },
 }).mount("#my-carousel");
